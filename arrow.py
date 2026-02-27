@@ -1,0 +1,22 @@
+from pgl import GWindow, GRect, GArc, GPolygon, GCompound
+
+GW_WIDTH = 800
+GW_HEIGHT = 200
+ARROW_WIDTH = 15
+ARROW_LENGTH = 200
+ARROWHEAD_OVAL_WIDTH = 125
+ARROWHEAD_OVAL_HEIGHT = ARROW_WIDTH * 2
+FLETCHING_LENGTH = ARROW_LENGTH * 0.25
+FLETCHING_WIDTH = ARROW_WIDTH
+
+gw = GWindow(GW_WIDTH, GW_HEIGHT)
+
+shaft = GRect(ARROW_LENGTH, ARROW_WIDTH)
+shaft.set_filled(True)
+shaft.set_color("gray")
+gw.add(
+    shaft,
+    GW_WIDTH / 2 - ARROW_LENGTH / 2,
+    GW_HEIGHT / 2 - ARROW_WIDTH / 2,
+)
+
